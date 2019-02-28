@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Handzap
+    </title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+
+  </head>
+
+  <body class="container-fluid containerfluid ">
+    <div class="">
+      <div class="container-navbar">
+        <div class="md-screen">
+          <div class="">
+            <div class="company-title inline-block">
+              Handzap
+            </div>
+            <ul class="inline-block titlelist">
+              <li id="title1" class="inline-block ">Title 1</li>
+              <li id="title2" class="inline-block">Title 2 </li>
+            </ul>
+            <div class="my-rewards">
+
+             <div class="rewards inline-block">
+                My Rewards
+             </div>
+              <div class="img-container inline-block">
+                <span class="red"></span>
+                <img src="./assets/contact.png" alt="contact image">
+                <div class="contact-dropdown">
+                  <div class="info-content">
+
+                    <div class="img-container inline-block">
+                      <img class="img-dropdown" src="./assets/contact.png" alt="contact image">
+                    </div>
+                    <div class="inline-block contact-info">
+                      Rebecca
+                      <br>
+                      +91 88888 99999
+                      <br>
+                      rebecca.will@gmail.com
+
+                    </div>
+
+                  </div>
+                  <div class="invitation">
+                    <div class="invitations" >
+                      Invitations
+                    </div>
+                    rebecca.will@gmail.com
+                    <span class="number">99</span>
+
+                  </div>
+                  <div class="settings">
+                    Account
+                  </div>
+                  <div class="settings">
+                    Settings
+                  </div>
+                  <div class="settings">
+                    Wallet
+                  </div>
+                  <div class="settings">
+                    Help
+                  </div>
+                  <div class="settings">
+                    Log Out
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+
+        </div>
+
+      </div>
+      <div class="container-body">
+
+        <div class="titleTab-body">
+          <div class="title-tab">
+            <div class="title-display">
+                <p id="titles1">Title 1 </p>
+                <p id="titles2">Title 2</p>
+
+            </div>
+            <ul class="inline-block list-tabs">
+              <li id="actived" class="inline-block ">ACTIVE</li>
+              <li  id="deleted" class="inline-block">DELETED</li>
+            </ul>
+          </div>
+          <div class="tab-body">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+  <script>
+$(document).ready(function(){
+  $("#titles1").show();
+  $("#titles2").hide();
+  $(".contact-dropdown").hide();
+  $("#actived").addClass("active");
+  $("#title1").addClass("active");
+  // $(".coontact-dropdown").hide();
+
+  $("#title1").click(function(){
+    $("#titles1").show();
+    $("#title2").removeClass("active");
+      $("#title1").addClass("active");
+    $("#titles2").hide();
+
+
+  });
+  $("#title2").click(function(){
+    $("#titles1").hide();
+      $("#titles2").show();
+    $("#title1").removeClass("active");
+    $("#title2").addClass("active");
+
+
+  });
+  $("#actived").click(function(){
+      $("#actived").addClass("active");
+      $("#deleted").removeClass("active");
+  });
+  $("#deleted").click(function(){
+      $("#deleted").addClass("active");
+      $("#actived").removeClass("active");
+  });
+  $(".img-container").hover(function(){
+      $(".contact-dropdown").show();
+  });
+  // $(".img-container").mouseout(function(){
+  //     $(".contact-dropdown").hide();
+  // });
+  $(".img-container .contact-dropdown").mouseout(function(){
+      $(".contact-dropdown").hide();
+  });
+  $(".contact-dropdown").mouseout(function(){
+      $(".contact-dropdown").hide();
+  });
+  // $(".img-container .contact-dropdown").mouseout(function(){
+  //     $(".contact-dropdown").hide();
+  // });
+});
+</script>
+</html>
